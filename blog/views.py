@@ -5,6 +5,11 @@ from .models import Post
 from .forms import CommentForm
 
 
+def about(request):
+    """ A view to return the about us page """
+    return render(request, 'about.html')
+
+
 class PostList(generic.ListView):
     model = Post
     queryset = Post.objects.filter(status=1).order_by("-created_on")
