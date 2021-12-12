@@ -1,9 +1,19 @@
 {% extends "base.html" %}
-
 {% block content %}
-
-<p>This is an About Us page!</p>
-
-<p>This is so cool!</p>
-
+<section id="about-us">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 mt-3 offset-md-2">
+                <h2>About Us</h2>
+                <p>
+                    Dessert Island is a recipe blog, providing you with some of the most delicious desserts to try at the comfort of your own home.
+                    <br><br>
+                    Our aim is to become a growing and friendly community where dessert lovers all over the world can join and share their thoughts and reviews on different recipes. 
+                    <br><br>
+                    If you're not a member yet, we encourage you to <a href="{% url 'account_signup' %}">sign up</a> and enjoy the finer things in life!
+                </p>
+            </div>
+        </div>
+    </div>  
+</section>
 {% endblock %}

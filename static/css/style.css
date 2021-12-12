@@ -24,6 +24,11 @@ body {
     color: #fff;
 }
 
+h2 {
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+}
+
 /* Navigation */
 
 .navbar-dark .navbar-nav .nav-link {
@@ -68,6 +73,31 @@ body {
 
 .social-links i:hover {
     color: rgb(214, 170, 255);
+}
+
+/* About Us, Login Page, Register Page */
+
+#about-us {
+    margin: 0 auto;
+}
+
+#about-us, #login-page, #register-page {
+    background-color: #212529;
+    color: #fff;
+    border-radius: 25px;
+    width: 800px;
+    max-width: 80%;
+    padding: 25px;
+    margin-top: 100px;
+}
+
+.btn-signup {
+    color: #fff;
+    background-color: rgb(214, 170, 255);
+}
+
+.btn-signup:hover, .btn-signup:active {
+    color: black;
 }
 
 /* .brand {
