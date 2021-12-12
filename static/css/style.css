@@ -45,6 +45,30 @@ body {
     background-color: rgb(214, 170, 255);
 }
 
+/* Footer Section */
+
+#footer {
+    position:absolute;
+    bottom:0;
+    width:100%;
+    background-color: #212529;
+}
+
+/* Social Media Links */
+
+.social-links > li {
+    display: inline;
+}
+
+.social-links i {
+    color: #fff;
+    font-size: 150%;
+    margin: 0 1%;
+}
+
+.social-links i:hover {
+    color: rgb(214, 170, 255);
+}
 
 /* .brand {
     font-family: Lato, sans-serif;
