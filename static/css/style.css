@@ -1,8 +1,52 @@
-body {
-    background-color: #F9FAFC;
+/* General Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
 }
 
-.brand {
+body {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    background-color: #fff;
+}
+
+/* Logo and Headings */
+
+#logo {
+    color: rgb(214, 170, 255);
+    font-family: "Pacifico", sans-serif;
+    letter-spacing: 2px;
+}
+
+#logo:hover {
+    color: #fff;
+}
+
+/* Navigation */
+
+.navbar-dark .navbar-nav .nav-link {
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: rgb(214, 170, 255);
+}
+
+#search-bar > .btn {
+    color: #fff;
+    border-color: rgb(214, 170, 255);
+}
+
+#search-bar > .btn:hover {
+    color: black;
+    background-color: rgb(214, 170, 255);
+}
+
+
+/* .brand {
     font-family: Lato, sans-serif;
     font-size: 1.4rem;
     font-weight: 700;
@@ -139,4 +183,4 @@ body {
     color: #E84610;
     background: transparent;
     border: none;
-}
+} */
