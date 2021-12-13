@@ -14,7 +14,7 @@ def search(request):
     """ A view to return the search page """
     if request.method == "POST":
         searched = request.POST.get('searched', None)
-        results = Post.objects.filter(title__contains=searched)
+        results = Post.objects.filter(title__icontains=searched)
         return render(request, 'search.html', {'searched': searched, 'results': results})
     else:
         return render(request, 'search.html')

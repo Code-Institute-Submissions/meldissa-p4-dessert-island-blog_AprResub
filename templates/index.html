@@ -1,8 +1,18 @@
 {% extends "base.html" %}
 {% block content %}
+<!-- Start of Intro -->
 <section id="intro">
-    <p>Welcome to Dessert Island! Here you can meet your sweet tooth desires!</p>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 mt-3 text-center">
+                <h2>Welcome to <span id="logo-intro">Dessert Island</span></h2>
+                <p>Indulge yourself with our wonderful and delicious recipes.</p>
+            </div>
+        </div>
+    </div>
 </section>
+<!-- End of Intro -->
+<!-- Start of Blog Posts -->
 <div class="container-fluid">
     <div class="row">
         <!-- Blog Entries Column -->
@@ -38,7 +48,6 @@
             <div class="row">
                 {% endif %}
                 {% endfor %}
-
             </div>
         </div>
     </div>
@@ -50,10 +59,10 @@
             {% endif %}
             {% if page_obj.has_next %}
             <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
-
             {% endif %}
         </ul>
     </nav>
     {% endif %}
 </div>
-{%endblock%}
+<!-- End of Blog Posts -->
+{% endblock %}
