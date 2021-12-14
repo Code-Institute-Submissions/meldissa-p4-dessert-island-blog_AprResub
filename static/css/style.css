@@ -24,7 +24,7 @@ body {
     color: #fff;
 }
 
-h2, h3 {
+h2, h3, h4 {
     font-family: "Poppins", sans-serif;
     text-transform: uppercase;
 }
@@ -89,9 +89,19 @@ h2, h3 {
     color: black;
 }
 
-.post-link:hover,
-.page-link {
+.post-link:hover {
     color: rgb(214, 170, 255);
+}
+
+.page-link {
+    color: #fff;
+    background-color: #212529;
+    border: solid 1px rgb(214, 170, 255);
+}
+
+.page-link:hover {
+    color: rgb(214, 170, 255);
+    background-color: #212529;
 }
 
 .post-title {
@@ -134,10 +144,6 @@ h2, h3 {
     height: 100%;
     width: 150%;
     background: #212529;
-    -webkit-transform: skew(15deg);
-    -moz-transform: skew(15deg);
-    transform: skew(15deg);
-    z-index: 100;
 }
 
 .link {
