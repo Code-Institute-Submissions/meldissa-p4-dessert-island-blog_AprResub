@@ -32,6 +32,10 @@ h2, h3, h4 {
 
 /* Navigation */
 
+.navbar {
+    min-height: 80px;
+}
+
 .navbar-dark .navbar-nav .nav-link {
     text-transform: uppercase;
     color: #fff;
