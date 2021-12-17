@@ -40,6 +40,10 @@ h2, h3, h4 {
     color: rgb(214, 170, 255);
 }
 
+.active {
+    border-bottom: solid 1px rgb(214, 170, 255);
+}
+
 #search-bar > .btn {
     color: #fff;
     border-color: rgb(214, 170, 255);
@@ -100,7 +104,8 @@ h2, h3, h4 {
 }
 
 .post-link:hover {
-    color: rgb(214, 170, 255);
+    text-decoration: underline;
+    color: black;
 }
 
 .page-link {
