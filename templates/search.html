@@ -1,5 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
+<!-- Start of Parallax Image -->
+<div class="parallax">
+    <img src="https://res.cloudinary.com/meldissa/image/upload/v1639847560/photo-1587248720327-8eb72564be1e_m2dtzj.jpg" alt="Search Parallax Image">
+</div>
+<!-- End of Parallax Image -->
 <section id="search-results">
     <div class="container">
         <div class="row">
@@ -12,14 +17,17 @@
         <div class="row">
             <div class="col-md-12 mt-3 text-center">
                 {% if searched %}
-                <p>You searched for {{ searched }}</p>
+                <p>You searched for <span class="search-text">{{ searched }}</span></p>
+                {% endif %}
                 <br>
+                {% if results %}
                 {% for result in results %}
-                    <a href="{{ result.url }}">
-                    <p>{{ result.title }}</p>
+                    <a href="#" class="link">
+                        <p class="result-text">{{ result.title }}</p>
+                    </a>
                 {% endfor %}
                 {% else %}
-                    <p>Oops! No results found!</p>
+                    <h4>Oops! No results found!</h4>
                 {% endif %}
             </div>
         </div>

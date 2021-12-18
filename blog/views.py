@@ -10,16 +10,6 @@ def about(request):
     return render(request, 'about.html')
 
 
-def search(request):
-    """ A view to return the search page """
-    if request.method == "POST":
-        searched = request.POST.get('searched', None)
-        results = Post.objects.filter(title__icontains=searched)
-        return render(request, 'search.html', {'searched': searched, 'results': results})
-    else:
-        return render(request, 'search.html')
-
-
 class PostList(generic.ListView):
     model = Post
     queryset = Post.objects.filter(status=1).order_by("-created_on")
@@ -90,3 +80,13 @@ class PostLike(View):
             post.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
+
+def search(request):
+    """ A view to return the search page """
+    if request.method == "POST":
+        searched = request.POST.get('searched', None)
+        results = Post.objects.filter(title__icontains=searched)
+        return render(request, 'search.html', {'searched': searched, 'results': results})
+    else:
+        return render(request, 'search.html')

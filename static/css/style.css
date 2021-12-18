@@ -213,13 +213,13 @@ h2, h3, h4 {
     color: rgb(214, 170, 255);
 }
 
-/* About Us, Login Page, Register Page, Sign Out Page */
+/* About Us, Login Page, Register Page, Sign Out Page, Search Page */
 
-#about-us {
+#about-us, #search-results {
     margin: 0 auto;
 }
 
-#about-us, #login-page, #register-page, #sign-out {
+#about-us, #login-page, #register-page, #sign-out, #search-results {
     background-color: #212529;
     color: #fff;
     border-radius: 25px;
@@ -237,4 +237,19 @@ h2, h3, h4 {
 
 .btn-signup:hover, .btn-signup:active {
     color: black;
+}
+
+/* Search Page */
+
+.search-text {
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.2em;
+}
+
+.result-text {
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.2em;
 }
