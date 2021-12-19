@@ -19,9 +19,9 @@
                 <p>You searched for <span class="search-text">{{ searched }}</span></p>
                 <br>
                 {% if results %}
-                {% for result in results %}
-                    <a href="#" class="link">
-                        <p class="result-text">{{ result.title }}</p>
+                {% for post in results %}
+                    <a href="{% url 'post_detail' post.slug %}" class="link">
+                        <p class="result-text">{{ post.title }}</p>
                     </a>
                 {% endfor %}
                 {% else %}
