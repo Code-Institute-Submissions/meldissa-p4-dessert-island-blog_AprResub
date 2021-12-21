@@ -215,11 +215,11 @@ h2, h3, h4 {
 
 /* About Us, Login Page, Register Page, Sign Out Page */
 
-#about-us {
+#about-us, #no-result {
     margin: 0 auto;
 }
 
-#about-us, #login-page, #register-page, #sign-out {
+#about-us, #login-page, #register-page, #sign-out, #no-result {
     background-color: #212529;
     color: #fff;
     border-radius: 25px;
@@ -228,6 +228,20 @@ h2, h3, h4 {
     padding: 25px;
     margin-top: 80px;
     margin-bottom: 80px;
+}
+
+@media (min-height: 1366px) {
+    #about-us, #login-page, #register-page, #sign-out {
+        margin-top: 205px;
+        margin-bottom: 205px;
+    }
+
+    #no-result {
+        padding-top: 100px;
+        padding-bottom: 100px;
+        margin-top: 120px;
+        margin-bottom: 120px;
+    }
 }
 
 .btn-signup {
