@@ -90,3 +90,4 @@ def search(request):
         return render(request, 'search.html', {'searched': searched, 'results': results})
     else:
         return render(request, 'search.html')
+
