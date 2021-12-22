@@ -1,108 +1,170 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Dessert Island
 
-Welcome meldissa,
+[View published site on Heroku](https://p4-dessert-island.herokuapp.com/).
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+![](#)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+Image from [Am I Responsive](http://ami.responsivedesign.is/).
 
-## Gitpod Reminders
+## Project Overview
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
 
-`python3 -m http.server`
 
-A blue button should appear to click: _Make Public_,
+## Table of Contents
 
-Another blue button should appear to click: _Open Browser_.
+1. [User Experience (UX)](#ux)
+    * [Strategy](#strategy)
+        * [Project Goals](#project-goals)
+        * [User Stories](#user-stories)
+    * [Scope](#scope)
+    * [Design](#design)
+        * [Colours](#colours)
+        * [Typography](#typography)
+        * [Imagery](#imagery)
+    * [Skeleton](#skeleton)
+        * [Wireframes](#wireframes)
+2. [Features](#features)
+    * [Current Features](#current-features)
+    * [Future Features](#future-features)
+3. [Technologies Used](#tech-used)
+4. [Testing](#testing)
+    * [User Stories Testing](#user-testing)
+    * [Validation Testing](#validation-testing)
+    * [Known Issues and Resolutions](#issues)
+5. [Deployment](#deployment)
+6. [Credits](#credits)
+7. [Acknowledgements](#acknowledgements)
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+## User Experience (UX) <a name="ux"></a>
 
-A blue button should appear to click: _Make Public_,
+## Strategy <a name="strategy"></a>
 
-Another blue button should appear to click: _Open Browser_.
+### Project Goals <a name="project-goals"></a>
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
 
-To log into the Heroku toolbelt CLI:
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+### User Stories <a name="user-stories"></a>
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+* __Site User Goals:__
 
-------
+ 
 
-## Release History
+* __Site Owner Goals:__
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+## Scope <a name="scope"></a>
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+## Design <a name="design"></a>
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+### Colours <a name="colours"></a>
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+### Typography <a name="typography"></a>
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+The fonts were obtained from [Google Fonts](https://fonts.google.com/).
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+### Imagery <a name="imagery"></a>
 
-------
+Images are obtained from the [Freepik](https://www.freepik.com/) and [Flaticon](https://image.flaticon.com/icons/png/512/1038/1038100.png) website.
 
-## FAQ about the uptime script
 
-**Why have you added this script?**
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+## Skeleton <a name="skeleton"></a>
 
-**How will this affect me?**
+### Wireframes <a name="wireframes"></a>
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+Wireframes were created using [Balsamiq Wireframes](https://www.balsamiq.com/).
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+The wireframes have examples of desktop, tablet, and mobile phone displays.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
 
-**So….?**
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+## Features <a name="features"></a>
 
-**Can I opt out?**
+### Current Features <a name="current-features"></a>
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+### Future Features <a name="future-features"></a>
 
-**Anything more?**
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
 
----
+## Technologies Used <a name="tech-used"></a>
 
-Happy coding!
+For this project the main languages used are __HTML5__, __CSS3__ and __JavaScript__.
+
+I have also utilised the following frameworks, libraries, and tools:
+
+* [Bootstrap v5.0.2](https://getbootstrap.com/): 
+    * Bootstrap has been used for overall responsiveness of the website and for the layout with the addition of select classes.
+* [jQuery](https://jquery.com/):
+    * jQuery was used for additional function to display the modal sections in this project.
+* [GitPod](https://www.gitpod.io/): 
+    * I used GitPod as the IDE for this project and Git has been used for Version Control.
+* [GitHub](https://www.github.com/): 
+    * GitHub has been used to create a repository to host the project and receive updated commits from GitPod.
+* [Balsamiq](https://balsamiq.com/): 
+    * I used Balsamiq to create the wireframe for the website for the basic structure and layout.
+* [Flaticon](https://www.flaticon.com/): 
+    * I used Flaticon website to obtain the favicon image used for this project.
+* [Freepik](https://www.freepik.com/): 
+    * Freepik has been used for copyright free images for this project.
+* [Google Fonts](https://getbootstrap.com/): 
+    * I have used Google Fonts to import fonts for styling purposes for this project.
+* [GIMP v2.10](https://www.gimp.org/): 
+    * GIMP image manipulator program was used to change contrast for the background image used this project.
+* [Chrome Dev Tools](https://developers.google.com/web/tools/chrome-devtools): 
+    * Chrome Dev Tools was used to test the site, assist with debugging issues and run reports from Lighthouse.
+* [W3C Markup Validation Service](https://validator.w3.org/): 
+    * The W3C Markup Validation Service was used to validate the HTML document for this project and to identify any issues with the code.
+* [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/): 
+    * The W3C CSS Validation Service was used to validate the CSS document for this project and to identify any issues with the code.
+* [JSHint Validation Service](https://jshint.com/): 
+    * The JSHint Validation Service was used to validate the JavaScript document for this project and to identify any issues with the code.
+* [Color Contrast Accessibility Validator](https://color.a11y.com/):
+    * This was used to test the colour contrast accessibility for this project.
+* [Am I Responsive](http://ami.responsivedesign.is/):
+    * Am I Responsive was used to create the header image for the README file.
+
+## Testing <a name="testing"></a>
+
+### User Stories Testing <a name="user-testing"></a>
+
+
+
+### Validation Testing <a name="validation-testing"></a>
+
+
+
+### Known Issues and Resolutions <a name="issues"></a>
+
+
+
+## Deployment <a name="deployment"></a>
+
+
+
+## Credits <a name="credits"></a>
+
+### Content
+
+
+
+### Media
+
+
+
+### Code
+
+
+
+## Acknowledgements <a name="acknowledgements"></a>
+
+* I would like to thank my family and friends for their support throughout this project and for assisting with the testing stage and providing valuable feedback.
+* My mentor, Guido Cecilio, for being of great support and providing valuable guidance and feedback throughout this process.
