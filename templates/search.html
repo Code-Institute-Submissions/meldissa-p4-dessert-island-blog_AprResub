@@ -5,6 +5,8 @@
     <img src="https://res.cloudinary.com/meldissa/image/upload/v1639847560/photo-1587248720327-8eb72564be1e_m2dtzj.jpg" alt="Search Parallax Image">
 </div>
 <!-- End of Parallax Image -->
+<!-- Start of Search Section -->
+<!-- Please note code was used from the following YouTube video to help build the search functionality credit: https://www.youtube.com/watch?v=AGtae4L5BbI -->
 <section id="search-results">
     <div class="container">
         <div class="row">
@@ -16,9 +18,11 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12 mt-3 text-center">
+                <!-- Return searched input from user -->
                 <p>You searched for <span class="search-text">{{ searched }}</span></p>
             </div>
         </div>
+        <!-- If statement to return recipe results which match to input from user -->
         {% if results %}
         <div class="row">
             <div class="col-12 mt-3 left">
@@ -52,6 +56,7 @@
                 </div>
             </div>
         </div>
+        <!-- Return else statement if no search results location -->
         {% else %}
         <div id="no-result">
             <div class="row">
@@ -63,4 +68,5 @@
         {% endif %}
     </div>
 </section>
+<!-- End of Search Section -->
 {% endblock %}
