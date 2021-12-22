@@ -5,12 +5,14 @@ from .models import Post
 from .forms import CommentForm
 
 
-def about(request):
-    """ A view to return the about us page """
-    return render(request, 'about.html')
+"""
+Please note code was used from the Code Institute I Think Therefore I Blog
+tutorial to help create this project.
+"""
 
 
 class PostList(generic.ListView):
+    """ A view for the post list """
     model = Post
     queryset = Post.objects.filter(status=1).order_by("-created_on")
     template_name = "index.html"
@@ -18,7 +20,7 @@ class PostList(generic.ListView):
 
 
 class PostDetail(View):
-
+    """ A view for the post detail """
     def get(self, request, slug, *args, **kwargs):
         queryset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
@@ -71,7 +73,7 @@ class PostDetail(View):
 
 
 class PostLike(View):
-    
+    """ A view for the post likes """
     def post(self, request, slug, *args, **kwargs):
         post = get_object_or_404(Post, slug=slug)
         if post.likes.filter(id=request.user.id).exists():
@@ -82,12 +84,21 @@ class PostLike(View):
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
 
+def about(request):
+    """ A view to return the about us page """
+    return render(request, 'about.html')
+
+
 def search(request):
-    """ A view to return the search page """
+    """
+    A view to return the search page.
+    Please note code was used from the following YouTube video
+    to help build the search functionality 
+    credit: https://www.youtube.com/watch?v=AGtae4L5BbI 
+    """
     if request.method == "POST":
         searched = request.POST.get('searched', None)
         results = Post.objects.filter(title__icontains=searched)
         return render(request, 'search.html', {'searched': searched, 'results': results})
     else:
         return render(request, 'search.html')
-

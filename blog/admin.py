@@ -3,6 +3,12 @@ from .models import Post, Comment
 from django_summernote.admin import SummernoteModelAdmin
 
 
+"""
+Please note code was used from the Code Institute I Think Therefore I Blog
+tutorial to help create this project.
+"""
+
+
 @admin.register(Post)
 class PostAdmin(SummernoteModelAdmin):
 
