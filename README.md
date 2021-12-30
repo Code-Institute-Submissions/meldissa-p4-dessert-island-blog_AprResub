@@ -92,18 +92,35 @@ To achieve the strategy goals, I want to implement the following features:
 
 ### Colours <a name="colours"></a>
 
+I have used white for the overall background colour for the website, accompanied by black and #212529 for the header and footer to notably distinguish this from the main content. 
+
+For the text, black has been used against the white background and white has been used against the black header and footer. This opposite contrast has been chosen for ease of visibility, so users are able to read the text without any additional difficulty.
+
+In addition, rgb(214, 170, 255) has been used as a complementing accent to the website for the logo and hover links without causing any distractions to the user viewing the website.
 
 
 ### Typography <a name="typography"></a>
 
 The fonts were obtained from [Google Fonts](https://fonts.google.com/).
 
+For my logo text I have used Pacifico.
+
+For the heading text I have used Poppins.
+
+For the main text I have selected Montserrat which complements the font used for my headings and logo. 
+
+I have avoided using overly stylised fonts, which can be difficult to read for users, therefore ensuring the website is more accessible to users with visual impairments.
+
+In the event the font fails to load, I have used sans-serif as a back-up font.
 
 
 ### Imagery <a name="imagery"></a>
 
-Images are obtained from the [Freepik](https://www.freepik.com/) and [Flaticon](https://image.flaticon.com/icons/png/512/1038/1038100.png) website.
+Images are obtained from the [Freepik](https://www.freepik.com/), [Unsplash](https://unsplash.com/) and [BBC Good Food](https://www.bbcgoodfood.com/) websites.
 
+I have used imagery appropriate to the website’s content to provide a more visual experience to the user.
+
+Please see further details in the __Credits__ section for the specific images used within the project.
 
 
 ## Skeleton <a name="skeleton"></a>
@@ -113,7 +130,6 @@ Images are obtained from the [Freepik](https://www.freepik.com/) and [Flaticon](
 Wireframes were created using [Balsamiq Wireframes](https://www.balsamiq.com/).
 
 The wireframes have examples of desktop, tablet, and mobile phone displays.
-
 
 
 ## Features <a name="features"></a>
