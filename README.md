@@ -8,7 +8,7 @@ Image from [Am I Responsive](http://ami.responsivedesign.is/).
 
 ## Project Overview
 
-
+Dessert Island is a website that aims to provide a blog-style recipe website for various desserts which user can view and interact with via comments and likes by signing up and creating an account or logging into and existing one. This site has been created as part of my Portfolio Project 4 for Code Institute.
 
 ## Table of Contents
 
@@ -41,7 +41,9 @@ Image from [Am I Responsive](http://ami.responsivedesign.is/).
 
 ### Project Goals <a name="project-goals"></a>
 
+The main business goal for Dessert Island is to provide users with a blog-style website with various dessert recipes accessible for the user to view. The user can create an account to be able to further interact with these blog posts via likes and adding comments. 
 
+The main target audience for this website are cooking/baking and dessert fanatics who enjoy experiencing new type of desserts and following recipes coming from different levels of background with their cooking/baking skills. This is also a website for users to be able to share their comments and reviews of the recipes with the community.
 
 ### User Stories <a name="user-stories"></a>
 
