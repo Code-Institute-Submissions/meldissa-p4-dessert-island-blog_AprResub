@@ -148,9 +148,113 @@ Overall, the finished project design is similar to what I had originally intende
 
 ### Current Features <a name="current-features"></a>
 
+For this project I opted for a website with different pages accessed by clicking the nav links, this is fully responsive and consists of a header, footer and the following main sections; Home, About Us, Blog Post, Sign Up, Login and Search.
+
+__Navigation__:
+
+* This feature is present on all the pages/sections and is fixed to the top.
+* The header section has a fully responsive navigation bar which consists of the logo, located on the left-hand side.
+* The navigation buttons for Home, About Us, Sign Up, Login (located left-hand side after the logo) and a Search bar (located on the right-hand side).
+* Style has been applied to the logo and buttons on the left-hand side so the user is able to hover over these to signify that the links can be clicked.
+* The Search bar has placeholder text to indicate to the user that they can enter text in the box provided. 
+* Style has also been applied to the search button next to the input box to indicate to the user that this has been selected and can be clicked.
+
+__Home__:
+
+* This is the default page displayed when the user accesses the website.
+* This page can also be viewed by clicking the Dessert Island logo or the home button from the navigation.
+* An introductory message displayed to the user.
+* Recipe blog posts displayed (max of 6) per page.
+* There is a 'Next' button that allows user to click and navigate to the next page to view more recipes.
+* Alternatively 'Prev' button can be clicked to return a page back.
+* Recipe blog posts are displayed from most recent to oldest.
+* Each post is displayed in a card style with an image, author, date, title and like count.
+* Style has been applied so the user can hover over the text for the posts which will underline to indicate that this can be selected.
+* Selecting the clickable text will take the user to the 'Blog Posts' page to display the full content of the recipe post.
+
+__About__:
+
+* User can access this section by clicking the 'About' button from the navigation.
+* A parallax header image added at the top (after the navigation).
+* User is able to scroll further down the page and access the text which provides more detail about the website and it's purpose.
+* For new users, a sign up link is also within the text which will take them to the 'Sign Up' page and allow the user to create an account.
+
+__Blog Post__:
+
+* Accessed once the user selects a recipe post from the 'Home' or 'Search' page.
+* Recipe title and image displayed at the top (image is not displayed on smaller devices).
+* Content is then followed by the ingredient list and method steps.
+* Further below is the comment section which users can view even if not logged in.
+* Comment section is available and displayed for logged in users who can submit a comment.
+* This is then sent for approval which is a feature only the Admin can access.
+* Alert is displayed to indicate the comment has been sent for approval.
+* Approved comments can be viewed on the post.
+
+__Sign Up__:
+
+* Accessed from the navigation bar by selecting the 'Sign Up' button. 
+* Once selected, the user is taken to the 'Sign Up' page.
+* A parallax header image added at the top (after the navigation).
+* New users are prompted to enter a username, email (optional), password and password again to confirm.
+* All fields apart from the email (optional) are required for the user to be able to create an account, otherwise an error is displayed.
+* Upon successful creation the user is then able to login to the account.
+* Alert is displayed to indicate that the user has signed in.
+* Existing users are provided with the sign in link to take them to the 'Login' page.
+
+__Login__:
+
+* Accessed from the navigation bar by selecting the 'Login' button. 
+* Once selected, the user is taken to the 'Login' page.
+* A parallax header image added at the top (after the navigation).
+* Existing users can enter their username and password and click the login button.
+* Upon successful login, user is taken to the 'Home' page.
+* Alert is displayed to indicate that the user has signed in.
+* Incorrect username and password will faily to log the user into their account and a message will be displayes on the 'Login' page to indicate this.
+* New users are provided with the register link to take them to the 'Sign Up' page to create an account.
+
+__Logout__:
+
+* Option only available to users who are currently logged in.
+* Accessed from the navigation bar by selecting the 'Logout' button.
+* Once selected, user will be taken to the 'Sign Out' page to confirm that they wish to sign out from their account.
+* A parallax header image added at the top (after the navigation).
+* User can select the sign out button option which will successfully sign out the user from their account and return them to the home page.
+* Alert added to indicate that the user has signed out.
+
+__Search__:
+
+* Accessed from the navigation bar in the top right-hand corner. 
+* Placeholder text added to indicate to the user that text can be entered in the input box.
+* User cannot submit an empty search and user has to enter a max of 2 characters otherwise an error is displayed.
+* User is able to click the search button once the requirements are met (as stated above), this will take the user to the 'Search' page.
+* A parallax header image added at the top (after the navigation).
+* User is able to scroll down and view the displayed results of the recipes which match the keywords entered.
+* Prior to the search results, the user is displayed with the keyword searched and below the results are displayed.
+* For any successful matches display the recipe card (same as the ones on the 'Home' page), the user can click this and be taken to the recipe page.
+* For any unsuccessful matches, the user is displayed with a message to state that no results have been found for this keyword.
+
+__Footer__:
+
+* This feature is present on all the pages/sections and is fixed to the top.
+* Social media links can be accessed by the user.
+* Hover style applied to signal to the user which link they are selecting and opening. 
+* Links open in a new tab so the user is not taken away from the main website and can easily return.
+
+__Features Exclusive to Admin__:
+
+* Only the Admin can approve and delete user comments.
+* Only the Admin can create posts.
+
 
 ### Future Features <a name="future-features"></a>
 
+Due to time constraints, I was unable to apply additional features, in the future I would like to implement the following:
+
+* Allow users to edit/delete their own posted comments. Verification would need to be added to ensure that the user is only able to edit/delete their own comments and be restricted from amending any other users' comments.
+
+* Allow users to create their own posts, this would go to Admin for approval to ensure that the content is consistent and appropriate to the website.
+
+* Add a tick list on the blog post section for the recipes. This will allow users to tick off against each of the ingredients to signify which items they have and which they do not. This was added as a User Story for the Poject section in GitHub, however was out of scope for this project at this moment in time as it was not necessary for the website to function.
 
 
 ## Technologies Used <a name="tech-used"></a>
