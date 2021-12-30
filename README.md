@@ -75,6 +75,17 @@ The main target audience for this website are cooking/baking and dessert fanatic
 
 ## Scope <a name="scope"></a>
 
+To achieve the strategy goals, I want to implement the following features:
+
+* A navigation bar fixed at the top of the screen which will allow the user to easily navigate and find the relevant sections.
+* A Home section which will allow the user to find out about the website and view posts.
+* An About Us page to inform the user about this website.
+* A Login page for existing users to access their account to allow to like and add comments.
+* A Register/Signup page to allow new users to create an account.
+* A Blog post page to view the selected post in more detail for the recipes and add comments/like the post.
+* A Search bar to allow users to enter specific keywords to be able to locate desired recipes.
+* A Footer located at the bottom of the website which allows the user to access social media links.
+* A fully responsive design that will work on different devices including desktop, tablets, and mobile devices, allowing users to access the site anytime and anywhere.
 
 
 ## Design <a name="design"></a>
