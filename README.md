@@ -337,6 +337,25 @@ I have also utilised the following frameworks, libraries, and tools:
 
 ## Deployment <a name="deployment"></a>
 
+The project was developed using GitPod and was deployed via the GitHub repository to Heroku.
+
+The following steps were followed to deploy this project:
+
+1. From the Heroku dashboard, select 'New' in the top right-hand corner.
+2. Click 'Create new app'.
+3. Enter the app name and choose region as Europe. 
+4. Click 'Create app'.
+5. Select the 'Settings' tab, and scroll down to 'Buildpacks'. 
+6. Add 'Python' and save changes.
+7. Scroll down to 'Config Vars' section, and add the 'KEY' and 'VALUE' for the CLOUDINARY_URL, DATABASE_URL and SECRET_KEY to run the app.
+8. At the top of the page, click on the 'Deploy' section.
+9. Select Github as deployment method.
+10. Select 'Connect to Github', and locate the repository name and click on 'Connect' to link my Heroku app to my Github repository code.
+11. To add the Postgres Database, click on the 'Resources' tab.
+12. Under Add-ons, search for 'Heroku Postgres', click on the search result for this.
+13. Select the 'Hobby Dev-Free' option and click submit order form which will add this to the Add-ons section.
+14. Scroll further down, select 'Enable Automatic Deploys' and then select 'Deploy Branch' to deploy project.
+15. After it has successfully deployed a 'view' button appears on screen and when clicked opens the deployed application.
 
 
 ## Credits <a name="credits"></a>
