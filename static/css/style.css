@@ -147,6 +147,12 @@ h2, h3, h4 {
     width: 100%;
 }
 
+@media (max-width: 767px) {
+    .masthead {
+        height: 400px;
+    }
+}
+
 .masthead-text {
     background-color: #212529;
     color: white;
@@ -156,15 +162,6 @@ h2, h3, h4 {
 .masthead-image {
     position: relative;
     overflow: hidden;
-}
-
-.masthead-image:after {
-    position: absolute;
-    top: 0;
-    right: 90%;
-    height: 100%;
-    width: 150%;
-    background: #212529;
 }
 
 .link {
