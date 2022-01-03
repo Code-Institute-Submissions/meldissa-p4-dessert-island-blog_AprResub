@@ -259,11 +259,11 @@ Due to time constraints, I was unable to apply additional features, in the futur
 
 ## Technologies Used <a name="tech-used"></a>
 
-For this project the main languages used are __HTML5__, __CSS3__ and __JavaScript__.
+For this project the main languages used are __HTML5__, __CSS3__, __JavaScript__, __Python__, __Django__ and __Heroku Postgres__.
 
 I have also utilised the following frameworks, libraries, and tools:
 
-* [Bootstrap v5.0.2](https://getbootstrap.com/): 
+* [Bootstrap v5.1.3](https://getbootstrap.com/): 
     * Bootstrap has been used for overall responsiveness of the website and for the layout with the addition of select classes.
 * [jQuery](https://jquery.com/):
     * jQuery was used for additional function to display the modal sections in this project.
@@ -273,14 +273,16 @@ I have also utilised the following frameworks, libraries, and tools:
     * GitHub has been used to create a repository to host the project and receive updated commits from GitPod.
 * [Balsamiq](https://balsamiq.com/): 
     * I used Balsamiq to create the wireframe for the website for the basic structure and layout.
-* [Flaticon](https://www.flaticon.com/): 
-    * I used Flaticon website to obtain the favicon image used for this project.
+* [Unsplash](https://unsplash.com/): 
+    * Unsplash has been used for copyright free images for this project.
 * [Freepik](https://www.freepik.com/): 
     * Freepik has been used for copyright free images for this project.
 * [Google Fonts](https://getbootstrap.com/): 
     * I have used Google Fonts to import fonts for styling purposes for this project.
+* [Font Awesome](https://fontawesome.com/): 
+    * Font Awesome was used to apply icons in the Home, Exercises and Footer sections.
 * [GIMP v2.10](https://www.gimp.org/): 
-    * GIMP image manipulator program was used to change contrast for the background image used this project.
+    * GIMP image manipulator program was used to edit the favicon used this project.
 * [Chrome Dev Tools](https://developers.google.com/web/tools/chrome-devtools): 
     * Chrome Dev Tools was used to test the site, assist with debugging issues and run reports from Lighthouse.
 * [W3C Markup Validation Service](https://validator.w3.org/): 
@@ -289,10 +291,35 @@ I have also utilised the following frameworks, libraries, and tools:
     * The W3C CSS Validation Service was used to validate the CSS document for this project and to identify any issues with the code.
 * [JSHint Validation Service](https://jshint.com/): 
     * The JSHint Validation Service was used to validate the JavaScript document for this project and to identify any issues with the code.
+* [PEP8 Online Validation Service](http://pep8online.com/): 
+    * The PEP8 Online Validation Service was used to validate the Python document for this project and to identify any issues with the code.
 * [Color Contrast Accessibility Validator](https://color.a11y.com/):
     * This was used to test the colour contrast accessibility for this project.
-* [Am I Responsive](http://ami.responsivedesign.is/):
-    * Am I Responsive was used to create the header image for the README file.
+* [Heroku](https://www.heroku.com/): 
+    * Heroku has been used to create a repository to host the project and receive updated commits from GitPod.
+* [Django](https://docs.djangoproject.com/en/3.1/): 
+    * Django was used as the main framework to build this project.
+* [Cloudinary](https://cloudinary.com/): 
+    * Cloudinary was used to store all media and static files for this project.
+* [Python](https://www.python.org/): 
+    * Various Python modules were used to build this project as detailed below and as seen in the requirements.txt file:
+      * asgiref==3.4.1
+      * cloudinary==1.28.0
+      * dj-database-url==0.5.0
+      * dj3-cloudinary-storage==0.0.6
+      * Django==3.2.9
+      * django-allauth==0.46.0
+      * django-crispy-forms==1.13.0
+      * django-summernote==0.8.20.0
+      * gunicorn==20.1.0
+      * oauthlib==3.1.1
+      * psycopg2==2.9.2
+      * PyJWT==2.3.0
+      * python3-openid==3.2.0
+      * pytz==2021.3
+      * requests-oauthlib==1.3.0
+      * sqlparse==0.4.2
+
 
 ## Testing <a name="testing"></a>
 
