@@ -362,15 +362,56 @@ The following steps were followed to deploy this project:
 
 ### Content
 
+All recipes were obtained from [BBC Good Food](https://www.bbcgoodfood.com/), details below for each individual recipe used:
+
+* Dark Chocolate & Cherry Bar - from [BBC Good Food](https://www.bbcgoodfood.com/recipes/dark-chocolate-cherry-bar)
+* Toffee Apply Bread & Butter Pudding - from [BBC Good Food](https://www.bbcgoodfood.com/recipes/toffee-apple-bread-butter-pudding)
+* Quick & Easy Tiramisu - from [BBC Good Food](https://www.bbcgoodfood.com/recipes/quick-easy-tiramisu)
+* Apply Crumble Sundae - from [BBC Good Food](https://www.bbcgoodfood.com/recipes/apple-crumble-sundae)
+* Rhubard & Custard Meringue Tart - from [BBC Good Food](https://www.bbcgoodfood.com/recipes/rhubarb-custard-meringue-tart)
+* Lemon Drizzle Sponge Pudding - from [BBC Good Food](https://www.bbcgoodfood.com/recipes/lemon-drizzle-sponge-pudding)
+* Rice Pudding - from [BBC Good Food](https://www.bbcgoodfood.com/recipes/a-nice-rice-pudding)
+* Victoria Sponge Loaf Cake - from [BBC Good Food](https://www.bbcgoodfood.com/recipes/victoria-sponge-loaf-cake)
+* White Chocolate Cheesecake - from [BBC Good Food](https://www.bbcgoodfood.com/recipes/white-chocolate-cheesecake)
+* Perfect Pavlova - from [BBC Good Food](https://www.bbcgoodfood.com/recipes/perfect-pavlova)
 
 
 ### Media
 
+The images used for this project we obtained from the following sources:
+
+Favicon:
+
+* Cupcake Icon - from [Freepik](https://www.freepik.com/free-vector/vector-cupcake-with-pink-whipped-cream-cherry-close-up-isolated-white-background_11060360.htm#page=1&query=cupcake%20icon&position=0&from_view=search)
+
+Header/Parallax Images:
+
+* About Us - from [Unsplash](https://unsplash.com/photos/6k1PJQpzFQo)
+* Sing Up - from [Unsplash](https://unsplash.com/photos/yCKZFRcX5W4)
+* Login - from [Unsplash](https://unsplash.com/photos/yCKZFRcX5W4)
+* Logout - from [Unsplash](https://unsplash.com/photos/6k1PJQpzFQo)
+* Search Results - from [Unsplash](https://unsplash.com/photos/HG1pJiQHXzs)
+
+Recipe Images:
+
+* Default - from [Freepik](https://www.freepik.com/free-photo/cooking-kitchen_877588.htm#page=1&query=baking&position=11&from_view=search)
+* Dark Chocolate & Cherry Bar - from [BBC Good Food](https://www.bbcgoodfood.com/recipes/dark-chocolate-cherry-bar)
+* Toffee Apply Bread & Butter Pudding - from [BBC Good Food](https://www.bbcgoodfood.com/recipes/toffee-apple-bread-butter-pudding)
+* Quick & Easy Tiramisu - from [BBC Good Food](https://www.bbcgoodfood.com/recipes/quick-easy-tiramisu)
+* Apply Crumble Sundae - from [BBC Good Food](https://www.bbcgoodfood.com/recipes/apple-crumble-sundae)
+* Rhubard & Custard Meringue Tart - from [BBC Good Food](https://www.bbcgoodfood.com/recipes/rhubarb-custard-meringue-tart)
+* Lemon Drizzle Sponge Pudding - from [BBC Good Food](https://www.bbcgoodfood.com/recipes/lemon-drizzle-sponge-pudding)
+* Rice Pudding - from [BBC Good Food](https://www.bbcgoodfood.com/recipes/a-nice-rice-pudding)
+* Victoria Sponge Loaf Cake - from [BBC Good Food](https://www.bbcgoodfood.com/recipes/victoria-sponge-loaf-cake)
+* White Chocolate Cheesecake - from [BBC Good Food](https://www.bbcgoodfood.com/recipes/white-chocolate-cheesecake)
+* Perfect Pavlova - from [BBC Good Food](https://www.bbcgoodfood.com/recipes/perfect-pavlova)
 
 
 ### Code
 
+* To build the search functionality for the website, code from the following [YouTube](https://www.youtube.com/watch?v=AGtae4L5BbI) video tutorial was used to assist with this.
 
+* A large part of this project code was used and inspired from the Code Institute's I Think Therefore I Blog walkthrough to be able to build a base skeleton project. Please note some of the borrowed code has been customised by me to fit this project. I have also added my own code for additional functions for the project.
 
 ## Acknowledgements <a name="acknowledgements"></a>
 
