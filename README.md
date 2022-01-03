@@ -2,7 +2,7 @@
 
 [View published site on Heroku](https://p4-dessert-island.herokuapp.com/).
 
-![](#)
+![](docs/images/responsive-img-header.png)
 
 Image from [Am I Responsive](http://ami.responsivedesign.is/).
 
@@ -301,6 +301,8 @@ I have also utilised the following frameworks, libraries, and tools:
     * Django was used as the main framework to build this project.
 * [Cloudinary](https://cloudinary.com/): 
     * Cloudinary was used to store all media and static files for this project.
+* [Am I Responsive](http://ami.responsivedesign.is/):
+    * Am I Responsive was used to create the header image for the README file.
 * [Python](https://www.python.org/): 
     * Various Python modules were used to build this project as detailed below and as seen in the requirements.txt file:
       * asgiref==3.4.1
