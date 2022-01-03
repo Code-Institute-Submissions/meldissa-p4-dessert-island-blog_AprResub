@@ -158,6 +158,15 @@ h2, h3, h4 {
     overflow: hidden;
 }
 
+.masthead-image:after {
+    position: absolute;
+    top: 0;
+    right: 90%;
+    height: 100%;
+    width: 150%;
+    background: #212529;
+}
+
 .link {
     color: rgb(214, 170, 255);
     text-decoration: none;
