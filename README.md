@@ -338,19 +338,21 @@ From the Home page, the user is presented with the navigation which consists of 
 
 The user can easily access the navigation as this is fixed at the top of the page and is accesable from all the pages of the website. On desktop view the navigation can be viewed in full but in mobile view this then collapses and is accsessed from the burger menu.
 
-![]()
+![](docs/images/usertest-nav.png)
 
 Further down from the navigation, the user is presented with a greeting introductory message for the Dessert Island website. This gives the user an idea that this is a recipe blog even without checking the About page for full details.
 
-![]()
+![](docs/images/usertest-intro.png)
 
 The main section of the Home page displays the posted recipes, there is a max of 6 recipes displayed per page. The user can navigate between the recipe pages by clicking Next button to go to the next page to view more recipes or clicking Prev button to go to the previous page. The recipes are displayed in date order, the most recent posts are displayed first and the older posts will be displayed at the very end (or on a different page if exceeding 6 posts per page). Each recipe is presented with a card style with an imagine, the author, recipe title, recipe description, posted date and time, and a like count. The user can select any recipe from the available posts by clicking the recipe title or description. This action will take the user to the recipe post page of that particular recipe.
 
-![]()
+![](docs/images/usertest-home1.png)
+
+![](docs/images/usertest-home2.png)
 
 At the bottom of the page is the footer. The footer is present and can be accessed from any page of the website. The footer provides social media links to the user which they are able to click to take them to the respective social media platforms. The social media links open in a new tab once clicked, this provides for a better user experience as the original website is not lost and the user is able to easily navigate back from where they left off. Further down from there is the copyright text for the website.
 
-![]()
+![](docs/images/usertest-footer.png)
 
 The following user stories have been achieved from this section:
 
@@ -361,7 +363,9 @@ The following user stories have been achieved from this section:
 
 Selecting the About button from the navigation will take the user to the About page. The top of the page has a parallax style banner image and further down is the About Us section with text the user is able to read. From here the user is able to find out more information about the website and the aim of Dessert Island. Any new users viewing this section are also provided with a link encouraging them to sign up and create and account to join the community. The sign up link from this section will take the user to the Sign Up page.
 
-![]()
+![](docs/images/usertest-about1.png)
+
+![](docs/images/usertest-about2.png)
 
 The following user stories have been achieved from this section:
 
@@ -369,57 +373,65 @@ The following user stories have been achieved from this section:
 
 Selecting the Sign Up button from the navigation will take the user to the Sign Up page. This page can also be accessed by clicking the links available on the About page and/or Login page. The top of the page is displayed with a parallax style banner image and further down is the Sign Up section, any existing users with an account are prompted to go to the login page provided from the link. Any new users are prompted to enter the required details to be able to sign up. The fiels username, password and password (again) are required fields, therefore the user cannot submit a blank form for these. However the E-mail is an optional field as stated on the form, therefore the user does not need to enter this to sign up to become a member.
 
-![]()
+![](docs/images/usertest-signup1.png)
+
+![](docs/images/usertest-signup2.png)
 
 If the password section does not match for both fields, then the user will be presented with a message to state that they must type the same password each time to be able to create the account.
 
-![]()
+![](docs/images/usertest-error1.png)
 
 If the password is too similar to the username the user will also be displayed with an error message. This is a security feature on the form to ensure the user's account cannot be acessed easily by creating a different and strong password.
 
-![]()
+![](docs/images/usertest-error2.png)
 
 Once the sign up form fields have been successfully filled out and the user clicks the sign up button, then the user will be taken back to the Hope page and an alert message will be displayed at the top (below the navigation) to indicate that the user is signed is as their 'username' name. The navigation will now be updated to remove Sign Up and Login buttons with the Logout button.
 
-![]()
+![](docs/images/usertest-nav2.png)
 
 Alternatively for any existing users with an account already created, by selecting the Login button from the button, this will take the user to the Login page. The link is also accessed from the sign up page for existing users. The top of the page is displayed with a parallax style banner image and further down is the Login section, any new users are prompted to go to the sign up page provided from the link. Any existing users are prompted to enter the required details to be able to login. The user is required to enter their username and password which they previously used to create the account. The user also has an option to tick the 'Remeber Me' checkbox. 
 
-![]()
+![](docs/images/usertest-login.png)
+
+![](docs/images/usertest-login2.png)
 
 Once the user has entered the relevant details and clicked the login button to submit the form, they will be taken back to the Home page and an alert will be displayed at the top of the page (below the navigation) to notify the user that they have logged in successfully. The navigation bar will be changed once logged in as described above in a previous point.
 
 Logged in users have the option to Logout from their account by selecting the Logout button from the navigation. By selecting the Logout button this will take the user to the Logout page. The top of the page is displayed with a parallax style banner image and further down is the Sign Out section, the message prompts the user to confirm if they wish to sign out. Selecting the sign out button will confirm this choice and the user will be taken back to the Home page, and an alter will be displayed to confirm that the user has signed out. Users who do not wish to logout can click back to the Home page from the navigation (or any other page) to undo this action.
 
-![]()
+![](docs/images/usertest-signout.png)
+
+![](docs/images/usertest-signout2.png)
 
 Users with an account that are logged in have the option to add comments and like posts on the post detail page once a recipe is selected.
 
 The main section of the recipe post is exactly the same for logged in users as is for users who are not logged in. The recipe title, author, time and date and image are displayed at the top. Then further down is the main post body with the ingridient list and method. At the end of the method section, there is a like counter and comment counter displayed which will show how many users have liked the post and how many comments does a post have.
 
-![]()
+![](docs/images/usertest-post.png)
 
 With likes and comments:
 
-![]()
+![](docs/images/usertest-likes.png)
 
 With no likes and comments:
 
-![]()
+![](docs/images/usertest-likes2.png)
 
 After the main recipe post, logged in users will be displayed with the comments section (on the left) where any posted comments which have been approved by the admin can be viewed, and the comment box (on the right) where the user can submit a comment. The comment box is only available for logged in users, whereas the comments section is visible to both logged in users and users not logged in.
 
 Logged in user view:
 
-![]()
+![](docs/images/usertest-post2.png)
 
 Generic view for non-members:
 
-![]()
+![](docs/images/usertest-post3.png)
 
 The comment box provides details to the user as to who they are posting as which corresponds to the username they have logged in with. Further down is the main comment body section where the user is able to enter a comment. Once clicking the submit button, the user will be presented with an altert message to state that the comment has been sent for approval. Only the admin can approve comments. Once the admin has approved the comment, this can now be viewed on the recipe post.
 
-![]()
+![](docs/images/usertest-comment.png)
+
+![](docs/images/usertest-comment2.png)
 
 The logged in user is also able to like a post by clicking the heart icon, this will increase the like acount by 1. Alternatively, the user can also unlike the post by clicking on the heart icon again which will decrease the count by 1.
 
@@ -433,23 +445,23 @@ The following user stories have been achieved from this section:
 
 Users are also able to utilise the search functionality on the website. This feature is accsessed from the navigation bar located on the right-hand side. 
 
-![]()
+![](docs/images/usertest-search.png)
 
 The user is able to enter a keyword corresponding to the desired recipe they would like to locate in the input box. Once this has been filled out, the user can click the submit button which will take them to the Search page. Users cannot submit a blank form as this field is required, in addition there is a requirement of minimun of 2 characters to be added before the form can be submitted.
 
-![]()
+![](docs/images/usertest-search2.png)
 
 On the Search page, there is a parallax type header image at the top, and further down is the search result section.
 
-![]()
+![](docs/images/usertest-search3.png)
 
 For the search results sections, the user is presented with the keyword searched and below that any successful returns of the keyword will display the recipes which match this. The recipe results are displayed in the same manner as the blog posts on the Home page. The user is able to click on the recipe post which will take them to the post detail page for that recipe. 
 
-![]()
+![](docs/images/usertest-search4.png)
 
 Any unsuccessful matches to the user's search will be displayed with a message to say so.
 
-![]()
+![](docs/images/usertest-search5.png)
 
 The following user stories have been achieved from this section:
 
@@ -461,7 +473,7 @@ This section tests the user stories for the Admin only functions of the website.
 
 The admin section is accessed by entering 'admin/' at the end of the url for the website. This displayed the login page for the admin from which they can login.
 
-![]()
+![](docs/images/usertest-admin.png)
 
 The site admin has various actions available to be able to manage the website such as:
 
@@ -473,19 +485,21 @@ From the home section of the admin page, by selecting the Users link under 'Auth
 
 From the home section, the admin can also view comments added by users some of which are pending approval. This is accessed from the Comments link under the 'Blog' section. Approved comments are indicated with a green tick under the Approved column. Comments pending approval have the red cross icon. To approve the comment the admin has to tick the unapproved comment from the list, then from the action drop down select the 'Approve comments' option. By clicking Go button this will proceed to carry out the action to approve the selected comment. Once the comment has been approved the red cross icon will now become a green tick icon to indicate that the comment has now been approved. The approved comment can also be viewed on the website now.
 
-![]()
+![](docs/images/usertest-admin2.png)
+
+![](docs/images/usertest-admin3.png)
 
 Alternatively selecting the 'Delete selected comments' action will proceed to delete the comment selected. Users will also no longer be able to view the comment on the website.
 
 From the home section, the admin can also view the posts on the website, create new posts and edit/delete any existing ones. This can be accessed from the Posts link under the 'Blog' section. By selecting this link, this will display all the current posts submitted on the website.
 
-![]()
+![](docs/images/usertest-admin4.png)
 
 The admin can delete any of these posts by selecting the 'Delete selected posts' action from the Action drop down.
 
 The admin can also click on an existing posts by selecting the post tile to view the editor. From this section the admin can edit the posts content, and also has the option to delete the post or to save the changes.
 
-![]()
+![](docs/images/usertest-admin5.png)
 
 The admin can also create new posts by selecting the Add Post + button. This will open up the editor page which will allow the fields to be populated. The status of the post can also be toggled between Draft or Published. The Published posts can then be viewed on the website, whereas Draft posts cannot.
 
