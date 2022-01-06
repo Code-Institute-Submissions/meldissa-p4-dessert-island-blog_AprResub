@@ -93,12 +93,19 @@ def search(request):
     """
     A view to return the search page.
     Please note code was used from the following YouTube video
-    to help build the search functionality 
-    credit: https://www.youtube.com/watch?v=AGtae4L5BbI 
+    to help build the search functionality
+    credit: https://www.youtube.com/watch?v=AGtae4L5BbI
     """
     if request.method == "POST":
         searched = request.POST.get('searched', None)
         results = Post.objects.filter(title__icontains=searched)
-        return render(request, 'search.html', {'searched': searched, 'results': results})
+        return render(
+            request,
+            'search.html',
+            {
+                'searched': searched,
+                'results': results
+            }
+        )
     else:
         return render(request, 'search.html')
