@@ -515,7 +515,57 @@ The following user stories have been achieved from this section:
 
 ### Validation Testing <a name="validation-testing"></a>
 
+To test the HTML code, I used the __W3C Markup Validation Service__.
 
+* Home Page (index.html):
+
+![](docs/images/valtest-home.png)
+
+* About Page (about.html):
+
+![](docs/images/valtest-about.png)
+
+* Sign Up (signup.html):
+
+![](docs/images/valtest-signup.png)
+
+* Login Page (login.html):
+
+![](docs/images/valtest-login.png)
+
+* Logout Page (logout.html):
+
+![](docs/images/valtest-logout.png)
+
+* Search Page (search.html):
+
+![](docs/images/valtest-search.png)
+
+* Post Detail (Recipe) Page (post_detail.html):
+
+![](docs/images/valtest-post.png)
+
+![](docs/images/valtest-post2.png)
+
+An error was located when testing the post_detail.html indicating that there was a closing p tag without an opening p tag. However, upon further inspection the opening p tag is present as displayed in the above screenshot (row 115 opening p tag and row 117 closing p tag). For some reason the HTML validator seems to throw out this error, this could potentially be due to content loading in between the p tags for the post detail. The opening and closing p tag is also present on the post_detail.html rows 28 and 30. Therefore, this does not seem to be a valid error.
+
+Please note that the base.html has been validated as part of the above pages as the code was inclusive of the testing.
+
+To test the CSS code, I used the __W3C CSS Validation Service__.
+
+style.css:
+
+![](docs/images/valtest-css.png)
+
+No errors were detected in the code.
+
+To test the JavaScript code, I used the __JSHint Validation Service__.
+
+script.js:
+
+![](docs/images/valtest-js.png)
+
+No errors were detected in the code. Warnings were detected in the code however this was due to the use of the new ES6 syntax in the code.
 
 ### Known Issues and Resolutions <a name="issues"></a>
 
