@@ -623,6 +623,9 @@ This website was also tested on the following devices:
 
 ### Known Issues and Resolutions <a name="issues"></a>
 
+* During testing there was an issue identified with testing the website on the Safari browser for the desktop. The images would not be displayed for the recipe posts and instead replaced with the alt text. Further steps were taken to research this issue to try and resolve, however not enough information could be located to help resolve the issue. This only seems to be an issue with the Safari browser on the desktop and the mobile devices tested using the Safari browser displayed the images as expected. This issue was left unresolved at the time of submitting the project due to now having enough knowledge or information to resolve this.
+
+* During testing there was a minor issue identified with the search bar of the website. When submitting the search form to return a result, the user could submit a blank form which in return would return all the recipes posted on the website. To overcome this issue, for the search form on the base.html file, 'required' was added to the input field. In addition, a pattern was added to the input field require a minimum of 2 characters to be entered before the user can submit the form. Although, the user can submit 2 blank characters for the search form, the result will now render a response to say no results were found for the blank search as no such recipes match the description of the search.
 
 
 ## Deployment <a name="deployment"></a>
