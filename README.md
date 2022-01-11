@@ -23,6 +23,7 @@ Dessert Island is a website that aims to provide a blog-style recipe website for
         * [Imagery](#imagery)
     * [Skeleton](#skeleton)
         * [Wireframes](#wireframes)
+        * [Database](#database)
 2. [Features](#features)
     * [Current Features](#current-features)
     * [Future Features](#future-features)
@@ -30,6 +31,7 @@ Dessert Island is a website that aims to provide a blog-style recipe website for
 4. [Testing](#testing)
     * [User Stories Testing](#user-testing)
     * [Validation Testing](#validation-testing)
+    * [Unit Testing](#unit-testing)
     * [Known Issues and Resolutions](#issues)
 5. [Deployment](#deployment)
 6. [Credits](#credits)
@@ -142,6 +144,15 @@ Overall, the finished project design is similar to what I had originally intende
 * I have decided to remove the 'Recipes' section from the nav as per the original wireframes. The original intention was that a user can click on this and will be taken to a new page where they are able to view all the posted recipes. However, this was a redundant idea as the posts were already displayed on the 'Home' page. Therefore, for final submission I opted for a search bar to replace this. The user instead can utilise the search bar to locate specific recipes with the use of keywords which in return will present recipes (if any found).
 
 * There are also some minor differences on the blog post section with the arrangement of the content. 
+
+
+### Database <a name="database"></a>
+
+A relational database was used for this project. 
+
+During production Postgres was used as the main database, and for deployment all data was migrated to Heroku Postgres.
+
+Please note that for testing purposes SQLite database was used. In the settings.py code was added to allow for the databases to be swtiched between SQLite for testing and Postgres for regular production. When DEVELOPMENT = True, then the SQLite database will be used for testing, and when this is set to False, then the Postgres database will be in use.
 
 
 ## Features <a name="features"></a>
@@ -621,6 +632,20 @@ This website was also tested on the following devices:
 * Android One Plus 8 Pro
 
 
+### Unit Testing <a name="unit-testing"></a>
+
+Further testing was completed importing the Django TestCase. The test files can be located in the blog > tests folder for the project, this consists of the following files:
+
+* test_forms.py
+* test_models.py
+* test_urls.py
+* test_views.py
+
+Please note that for testing purposes SQLite database was used. In the settings.py code was added to allow for the databases to be swtiched between SQLite for testing and Postgres for regular production. When DEVELOPMENT = True, then the SQLite database will be used for testing, and when this is set to False, then the Postgres database will be in use.
+
+To assist with the unit testing section of the project, Code Institute's Hello Django Testing tutorial section was utilised as well as the following [YouTube](https://www.youtube.com/watch?v=qwypH3YvMKc&list=PLbpAWbHbi5rMF2j5n6imm0enrSD9eQUaM&index=1) resource.
+
+
 ### Known Issues and Resolutions <a name="issues"></a>
 
 * During testing there was an issue identified with testing the website on the Safari browser for the desktop. The images would not be displayed for the recipe posts and instead replaced with the alt text. Further steps were taken to research this issue to try and resolve, however not enough information could be located to help resolve the issue. This only seems to be an issue with the Safari browser on the desktop and the mobile devices tested using the Safari browser displayed the images as expected. This issue was left unresolved at the time of submitting the project due to now having enough knowledge or information to resolve this.
@@ -705,6 +730,8 @@ Recipe Images:
 * To build the search functionality for the website, code from the following [YouTube](https://www.youtube.com/watch?v=AGtae4L5BbI) video tutorial was used to assist with this.
 
 * A large part of this project code was used and inspired from the Code Institute's I Think Therefore I Blog walkthrough to be able to build a base skeleton project. Please note some of the borrowed code has been customised by me to fit this project. I have also added my own code for additional functions for the project.
+
+* To assist with the unit testing section of the project, Code Institute's Hello Django Testing tutorial section was utilised as well as the following [YouTube](https://www.youtube.com/watch?v=qwypH3YvMKc&list=PLbpAWbHbi5rMF2j5n6imm0enrSD9eQUaM&index=1) resource.
 
 ## Acknowledgements <a name="acknowledgements"></a>
 
