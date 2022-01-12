@@ -96,8 +96,8 @@ def search(request):
     to help build the search functionality
     credit: https://www.youtube.com/watch?v=AGtae4L5BbI
     """
-    if request.method == "POST":
-        searched = request.POST.get('searched', None)
+    if request.method == "GET":
+        searched = request.GET.get('searched', None)
         results = Post.objects.filter(title__icontains=searched)
         return render(
             request,
