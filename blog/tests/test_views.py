@@ -11,13 +11,6 @@ class TestViews(TestCase):
         self.home_url = reverse('home')
         self.about_url = reverse('about')
         self.search_url = reverse('search')
-        self.post_detail_url = reverse('post_detail', args=['recipe1'])
-        self.post_like_url = reverse('post_like', args=['recipe1'])
-        self.user = User.objects.create(username='testname')
-        self.recipe = Post.objects.create(
-            title='recipe1',
-            author=self.user
-        )
 
     def test_post_list_GET(self):
         response = self.client.get(self.home_url)
@@ -34,12 +27,3 @@ class TestViews(TestCase):
         self.assertEquals(response.status_code, 200)
         self.assertTemplateUsed(response, 'search.html')
 
-    def test_post_detail_POST(self):
-        response = self.client.post(self.post_detail_url)
-        self.assertEquals(response.status_code, 200)
-        self.assertTemplateUsed(response, 'post_detail.html')
-
-    def test_post_like_POST(self):
-        response = self.client.post(self.post_like_url)
-        self.assertEquals(response.status_code, 200)
-        self.assertTemplateUsed(response, 'post_detail.html')
