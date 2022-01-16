@@ -31,7 +31,7 @@ Dessert Island is a website that aims to provide a blog-style recipe website for
 4. [Testing](#testing)
     * [User Stories Testing](#user-testing)
     * [Validation Testing](#validation-testing)
-    * [Unit Testing](#unit-testing)
+    * [Automated Testing](#auto-testing)
     * [Known Issues and Resolutions](#issues)
 5. [Deployment](#deployment)
 6. [Credits](#credits)
@@ -311,23 +311,7 @@ I have also utilised the following frameworks, libraries, and tools:
 * [Am I Responsive](http://ami.responsivedesign.is/):
     * Am I Responsive was used to create the header image for the README file.
 * [Python](https://www.python.org/): 
-    * Various Python modules were used to build this project as detailed below and as seen in the requirements.txt file:
-      * asgiref==3.4.1
-      * cloudinary==1.28.0
-      * dj-database-url==0.5.0
-      * dj3-cloudinary-storage==0.0.6
-      * Django==3.2.9
-      * django-allauth==0.46.0
-      * django-crispy-forms==1.13.0
-      * django-summernote==0.8.20.0
-      * gunicorn==20.1.0
-      * oauthlib==3.1.1
-      * psycopg2==2.9.2
-      * PyJWT==2.3.0
-      * python3-openid==3.2.0
-      * pytz==2021.3
-      * requests-oauthlib==1.3.0
-      * sqlparse==0.4.2
+    * Various Python modules were used to build this project as detailed below and as seen in the requirements.txt file.
 
 
 ## Testing <a name="testing"></a>
@@ -632,7 +616,7 @@ This website was also tested on the following devices:
 * Android One Plus 8 Pro
 
 
-### Unit Testing <a name="unit-testing"></a>
+### Automated Testing <a name="auto-testing"></a>
 
 Further testing was completed importing the Django TestCase. The test files can be located in the blog > tests folder for the project, this consists of the following files:
 
@@ -643,7 +627,18 @@ Further testing was completed importing the Django TestCase. The test files can 
 
 Please note that for testing purposes SQLite database was used. In the settings.py code was added to allow for the databases to be swtiched between SQLite for testing and Postgres for regular production. When DEVELOPMENT = True, then the SQLite database will be used for testing, and when this is set to False, then the Postgres database will be in use.
 
-To assist with the unit testing section of the project, Code Institute's Hello Django Testing tutorial section was utilised as well as the following [YouTube](https://www.youtube.com/watch?v=qwypH3YvMKc&list=PLbpAWbHbi5rMF2j5n6imm0enrSD9eQUaM&index=1) resource.
+The [Coverage](https://pypi.org/project/coverage/) was used to assist with automated testing to check the percentage of the project code that was covered with automated testing. The test provided an overall coverage of 84%.
+
+To generate your own coverage report: 
+
+* Install the package using pip install coverage
+* Run coverage run manage.py test
+* Then coverage html to generate the report
+* The report can be viewed in a browser by opening the index.html file from inside the htmlcov folder
+
+The remaining untested code was tested manually for this project as detailed in the above sections.
+
+In addition to completing automated testing for this project, the Travis CI for Continuous Integration was used to further test. However, due to changes with the Travis CI policy the free package was no longer accessible, therefore full testing could not be completed as expected.
 
 
 ### Known Issues and Resolutions <a name="issues"></a>
