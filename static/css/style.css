@@ -231,13 +231,13 @@ h2, h3, h4 {
     color: rgb(214, 170, 255);
 }
 
-/* About Us, Login Page, Register Page, Sign Out Page */
+/* About Us, Login Page, Register Page, Sign Out Page, Contact Us Page */
 
-#about-us, #no-result {
+#about-us, #no-result, #contact-us, #contact-success {
     margin: 0 auto;
 }
 
-#about-us, #login-page, #register-page, #sign-out, #no-result {
+#about-us, #login-page, #register-page, #sign-out, #no-result, #contact-us, #contact-success {
     background-color: #212529;
     color: #fff;
     border-radius: 25px;
@@ -248,7 +248,7 @@ h2, h3, h4 {
     margin-bottom: 100px;
 }
 
-@media (min-height: 1366px) {
+@media (min-height: 820px) {
     #about-us, #login-page, #register-page {
         margin-top: 205px;
         margin-bottom: 205px;
@@ -261,7 +261,7 @@ h2, h3, h4 {
         margin-bottom: 120px;
     }
 
-    #sign-out {
+    #sign-out, #contact-success {
         padding-top: 55px;
         padding-bottom: 55px;
         margin-top: 255px;

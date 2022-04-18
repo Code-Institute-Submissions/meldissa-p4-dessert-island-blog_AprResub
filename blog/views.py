@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Post
-from .forms import CommentForm
+from .forms import CommentForm, ContactForm
 
 
 """
@@ -109,3 +109,18 @@ def search(request):
         )
     else:
         return render(request, 'search.html')
+
+
+def contact(request):
+    """
+    Display contact form and allow users to submit messages.
+    """
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return render(request, 'contact_success.html')
+
+    form = ContactForm()
+    context = {'form': form}
+    return render(request, 'contact.html', context)
