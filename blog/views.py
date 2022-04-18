@@ -1,8 +1,10 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.http import HttpResponseRedirect
+from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from .models import Post
-from .forms import CommentForm, ContactForm
+from .forms import PostForm, CommentForm, ContactForm
 
 
 """
@@ -124,3 +126,78 @@ def contact(request):
     form = ContactForm()
     context = {'form': form}
     return render(request, 'contact.html', context)
+
+
+@login_required
+def add_post(request):
+    """ Add a post """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only admin can do that.')
+        return redirect(reverse('home'))
+
+    if request.method == 'POST':
+        form = PostForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added post!')
+            return redirect('home')
+        else:
+            messages.error(request,
+                           'Failed to add post. '
+                           'Please ensure the form is valid.')
+    else:
+        form = PostForm()
+
+    template = 'add_post.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
+
+
+@login_required
+def edit_post(request, slug, *args, **kwargs):
+    """ Edit a post """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only admin can do that.')
+        return redirect(reverse('home'))
+
+    queryset = Post.objects.filter(status=1)
+    post = get_object_or_404(queryset, slug=slug)
+
+    if request.method == 'POST':
+        form = PostForm(request.POST, request.FILES, instance=post)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated post!')
+            return redirect(reverse('post_detail', args=[slug]))
+        else:
+            messages.error(request,
+                           'Failed to update post. Please ensure the form '
+                           'is valid.')
+    else:
+        form = PostForm(instance=post)
+        messages.info(request, f'You are editing {post.title}')
+
+    template = 'edit_post.html'
+    context = {
+        'form': form,
+        'post': post,
+    }
+
+    return render(request, template, context)
+
+
+@login_required
+def delete_post(request, slug, *args, **kwargs):
+    """ Delete a post """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only admin can do that.')
+        return redirect(reverse('home'))
+
+    queryset = Post.objects.filter(status=1)
+    post = get_object_or_404(queryset, slug=slug)
+    post.delete()
+    messages.success(request, 'Post deleted!')
+    return redirect(reverse('home'))

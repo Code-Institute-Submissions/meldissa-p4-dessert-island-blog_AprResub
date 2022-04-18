@@ -231,13 +231,13 @@ h2, h3, h4 {
     color: rgb(214, 170, 255);
 }
 
-/* About Us, Login Page, Register Page, Sign Out Page, Contact Us Page */
+/* About Us, Login Page, Register Page, Sign Out Page, Contact Us Page, Add/Edit Post */
 
-#about-us, #no-result, #contact-us, #contact-success {
+#about-us, #no-result, #contact-us, #contact-success, #edit-post {
     margin: 0 auto;
 }
 
-#about-us, #login-page, #register-page, #sign-out, #no-result, #contact-us, #contact-success {
+#about-us, #login-page, #register-page, #sign-out, #no-result, #contact-us, #contact-success, #edit-post {
     background-color: #212529;
     color: #fff;
     border-radius: 25px;
@@ -246,6 +246,10 @@ h2, h3, h4 {
     padding: 25px;
     margin-top: 100px;
     margin-bottom: 100px;
+}
+
+#edit-post {
+    width: 1000px;
 }
 
 @media (min-height: 820px) {
