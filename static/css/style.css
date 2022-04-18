@@ -265,7 +265,7 @@ h2, h3, h4 {
         margin-bottom: 120px;
     }
 
-    #sign-out, #contact-success {
+    #sign-out, #contact-success, #error-page {
         padding-top: 55px;
         padding-bottom: 55px;
         margin-top: 255px;
