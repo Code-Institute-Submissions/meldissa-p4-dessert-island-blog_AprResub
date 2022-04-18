@@ -23,7 +23,7 @@ class Post(models.Model):
     excerpt = models.TextField(blank=True)
     updated_on = models.DateTimeField(auto_now=True)
     content = models.TextField()
-    category = models.TextField(blank=True, null=True)
+    category = models.TextField(blank=True, null=True, default='Unspecified')
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(
