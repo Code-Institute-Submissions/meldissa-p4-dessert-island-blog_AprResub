@@ -681,7 +681,7 @@ Further testing was completed importing the Django TestCase. The test files can 
 
 Please note that for testing purposes SQLite database was used. In the settings.py code was added to allow for the databases to be swtiched between SQLite for testing and Postgres for regular production. When DEVELOPMENT = True, then the SQLite database will be used for testing, and when this is set to False, then the Postgres database will be in use.
 
-The [Coverage](https://pypi.org/project/coverage/) was used to assist with automated testing to check the percentage of the project code that was covered with automated testing. The test provided an overall coverage of 84%.
+The [Coverage](https://pypi.org/project/coverage/) was used to assist with automated testing to check the percentage of the project code that was covered with automated testing. The test provided an overall coverage of 76%.
 
 To generate your own coverage report: 
 
