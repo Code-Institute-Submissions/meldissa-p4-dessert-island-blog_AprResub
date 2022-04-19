@@ -88,6 +88,8 @@ To achieve the strategy goals, I want to implement the following features:
 * A Search bar to allow users to enter specific keywords to be able to locate desired recipes.
 * A Footer located at the bottom of the website which allows the user to access social media links.
 * A fully responsive design that will work on different devices including desktop, tablets, and mobile devices, allowing users to access the site anytime and anywhere.
+* An Error 404 Page to allow users to redirect back to Home page in case of any errors.
+* Full CRUD functionality for Admin to allow to create, read, update and delete posts.
 
 
 ## Design <a name="design"></a>
@@ -145,21 +147,34 @@ Overall, the finished project design is similar to what I had originally intende
 
 * There are also some minor differences on the blog post section with the arrangement of the content. 
 
+* A Contact Us page has been added which was not part of the original wireframe mockups. This is due to the re-submission of the project to include a custom model. 
+
 
 ### Database <a name="database"></a>
 
 A relational database was used for this project. 
 
-During production Postgres was used as the main database, and for deployment all data was migrated to Heroku Postgres.
+During production SQLite/Postgres was used as the main database, and for deployment all data was migrated to Heroku Postgres.
 
 Please note that for testing purposes SQLite database was used. In the settings.py code was added to allow for the databases to be swtiched between SQLite for testing and Postgres for regular production. When DEVELOPMENT = True, then the SQLite database will be used for testing, and when this is set to False, then the Postgres database will be in use.
+
+![](docs/images/dbschema.png)
+
+The database diagram was created using [dbdiagram.io](https://dbdiagram.io/home).
+
+The database contains the following models, once of which is a custom model - Contact.
+
+* __Post__: Contains information about posts submitted by admin, has a relationship with the User model.
+* __Comment__: Contains information about comments submitted by the user, has a relationship with the Post model.
+* __Contact__: Contains information about form submitted by a site visitor, has no external relationships with other models.
+* __User__: Contains information about the user, this is a Django built-in model, has a relationship with the Post model.
 
 
 ## Features <a name="features"></a>
 
 ### Current Features <a name="current-features"></a>
 
-For this project I opted for a website with different pages accessed by clicking the nav links, this is fully responsive and consists of a header, footer and the following main sections; Home, About Us, Blog Post, Sign Up, Login and Search.
+For this project I opted for a website with different pages accessed by clicking the nav links, this is fully responsive and consists of a header, footer and the following main sections; Home, About Us, Blog Post, Sign Up, Login, Search, Contact and 404 error page.
 
 __Navigation__:
 
@@ -251,10 +266,22 @@ __Footer__:
 * Hover style applied to signal to the user which link they are selecting and opening. 
 * Links open in a new tab so the user is not taken away from the main website and can easily return.
 
+__Contact__:
+
+* Accessed once the user clicks the 'Contact Us' link from the navigation.
+* User is displayed with a contact form to fill out with the required fields of email, subject and message.
+* Form can be submitted via the 'Send' button upon which the user will receive a confirmation page to indicate message has been submitted successfully.
+* Admin can view the form submitted by the user in the admin only section to view the message.
+
+__404 Error Page__:
+
+* Only accessed when error occurs or invalid links are being accessed.
+* User is presented with the error message and provided with a link to direct back to the home page.
+
 __Features Exclusive to Admin__:
 
 * Only the Admin can approve and delete user comments.
-* Only the Admin can create posts.
+* Only the Admin can create, update and delete posts.
 
 
 ### Future Features <a name="future-features"></a>
@@ -282,6 +309,8 @@ I have also utilised the following frameworks, libraries, and tools:
     * GitHub has been used to create a repository to host the project and receive updated commits from GitPod.
 * [Balsamiq](https://balsamiq.com/): 
     * I used Balsamiq to create the wireframe for the website for the basic structure and layout.
+* [dbdiagram](https://dbdiagram.io/home): 
+    * I used dbdiagram to create the database diagram model for the website.
 * [Unsplash](https://unsplash.com/): 
     * Unsplash has been used for copyright free images for this project.
 * [Freepik](https://www.freepik.com/): 
@@ -316,15 +345,18 @@ I have also utilised the following frameworks, libraries, and tools:
 
 ## Testing <a name="testing"></a>
 
+Testing for this project was completed manually and some auto unit testing was also implemented.
+
 ### User Stories Testing <a name="user-testing"></a>
 
-From the Home page, the user is presented with the navigation which consists of the Dessert Island logo, Home button, About button, Sign Up button, Login button and on the right-hand side is the search bar with the Search button. Each of these buttons are functionable that the user can click or utilise. The following actions will occure once the user clicks the following buttons:
+From the Home page, the user is presented with the navigation which consists of the Dessert Island logo, Home button, About button, Sign Up button, Login button, Contact Us button and on the right-hand side is the search bar with the Search button. Each of these buttons are functionable that the user can click or utilise. The following actions will occure once the user clicks the following buttons:
 
 * Dessert Island Logo -> Defaults to the Home page, user can click this to take them back to the Home page
 * Home button -> Links to the Home page, user can click this to take them back to the Home page
 * About button -> Links to the About page, user can click this to take them to the About page 
 * Sign Up button -> Links to the Sign Up page, user can click this to take them to the Sign Up page
 * Login button -> Links to the Login page, user can click this to take them to the Login page
+* Contact Us button -> Links to the Contact page, user can click this to take them to the Contact Us page
 * Search button -> Links to the Search page, user can only click this once the search criteria has been met (cannot be blank and a minimum of 2 characters), this will then allow for the form to be submitted
 
 The user can easily access the navigation as this is fixed at the top of the page and is accesable from all the pages of the website. On desktop view the navigation can be viewed in full but in mobile view this then collapses and is accsessed from the burger menu.
@@ -538,6 +570,18 @@ To test the HTML code, I used the __W3C Markup Validation Service__.
 
 ![](docs/images/valtest-post2.png)
 
+* Contact Us (contact.html):
+
+![](docs/images/valtest-contact.png)
+
+* Add Post Page (add_post.html):
+
+![](docs/images/valtest-addpost.png)
+
+* Edit Post Page (edit_post.html):
+
+![](docs/images/valtest-editpost.png)
+
 An error was located when testing the post_detail.html indicating that there was a closing p tag without an opening p tag. However, upon further inspection the opening p tag is present as displayed in the above screenshot (row 115 opening p tag and row 117 closing p tag). For some reason the HTML validator seems to throw out this error, this could potentially be due to content loading in between the p tags for the post detail. The opening and closing p tag is also present on the post_detail.html rows 28 and 30. Therefore, this does not seem to be a valid error.
 
 Please note that the base.html has been validated as part of the above pages as the code was inclusive of the testing.
@@ -556,15 +600,20 @@ To test the JavaScript code, I used the __JSHint Validation Service__.
 
 ![](docs/images/valtest-js.png)
 
+The following HTML files were tested with script code:
+
+* add_post.html
+* edit_post.html
+
 No errors were detected in the code. Warnings were detected in the code however this was due to the use of the new ES6 syntax in the code.
 
 To test the Python code, I used the __PEP8 Online Validation Service__.
 
-All files passed through the validator and no issues were detected with the exception of the settings.py (rows 112, 115, 118, 121 and 144) and 0001_initial.py (rows 21, 26, 29, 30, 31, 40 and 46) files. This was due to the rows in question being too long, however as these are auto generated by Django or the link name being too long in the case of row 144 on the settings.py file for the cloudinary url, these rows were not amended and left as they are.
+All files passed through the validator and no issues were detected with the exception of the settings.py file. This was due to the rows in question being too long, however as these are auto generated by Django or the link name being too long these rows were not amended and left as they are.
 
 I also used the __Chrome Dev Tools Lighthouse Report__ to test both on desktop and mobile.
 
-The score for the lighthouse report for desktop and mobile run across the difference pages varied from 77 lowest to 100 highest. Further steps were taken to try to improve the score, however no major score changes could be achieved for the report. 
+The score for the lighthouse report for desktop and mobile run across the different pages varied from 77 lowest to 100 highest. Further steps were taken to try to improve the score, however no major score changes could be achieved for the report. 
 
 Home Page:
 
@@ -600,6 +649,11 @@ Post Detail (Recipe) Page:
 
 * [Desktop](docs/images/recipe-desktop.png)
 * [Mobile](docs/images/recipe-mobile.png)
+
+Contact Us Page:
+
+* [Desktop](docs/images/contact-desktop.png)
+* [Mobile](docs/images/contact-mobile.png)
 
 This website was tested on the following browsers:
 
@@ -647,6 +701,10 @@ In addition to completing automated testing for this project, the Travis CI for 
 
 * During testing there was a minor issue identified with the search bar of the website. When submitting the search form to return a result, the user could submit a blank form which in return would return all the recipes posted on the website. To overcome this issue, for the search form on the base.html file, 'required' was added to the input field. In addition, a pattern was added to the input field require a minimum of 2 characters to be entered before the user can submit the form. Although, the user can submit 2 blank characters for the search form, the result will now render a response to say no results were found for the blank search as no such recipes match the description of the search.
 
+* During testing it was identified that when a post has been published and then it is edited and changed to 'Draft' and updated, this will result in a page 404 error as the the user is being re-directed back to the post detail page which no longer exists due to the post being changed to a draft. The actual action itself has gone through and the admin can access the draft post from the admin section. The solution was to add the custom 404 error page to allow the user to navigate back to the home page safely without having to exit the website completely.
+
+* During testing when implementing the full CRUD functionality for admin to add posts via front end a major issue was encountered when the new post was submitted. A Django error page was displayed to indicate that the category column in the model could not be null. However, during the development process the category column which was previously migrated from the model was no longer included in the final project. Due to development error during this project as it was too difficult to unravel the migrations and remove the category column, this was left within the Post model. As this column was not used, a default placeholder was added and the TextField had blank=True and null=True as this was not required. This addition had resolved the issue and the admin can now create new posts without issue.
+
 
 ## Deployment <a name="deployment"></a>
 
@@ -669,6 +727,11 @@ The following steps were followed to deploy this project:
 13. Select the 'Hobby Dev-Free' option and click submit order form which will add this to the Add-ons section.
 14. Scroll further down, select 'Enable Automatic Deploys' and then select 'Deploy Branch' to deploy project.
 15. After it has successfully deployed a 'view' button appears on screen and when clicked opens the deployed application.
+
+Please note as of 18/04/2022, Heroku no longer allows deployment from GitHub and is currently under maintenance. As a workaround the following method is used using the GitPod terminal to deploy any further changes to Heroku.
+
+* Run the command heroku login -i and login when prompted. Then run the following command: heroku git:remote -a your_app_name_here and replace your_app_name_here with the name of your Heroku app. This will link the app to your Gitpod terminal.
+* After linking your app to your workspace, you can then deploy new versions of the app by running the command git push heroku main and your app will be deployed to Heroku.
 
 
 ## Credits <a name="credits"></a>
@@ -702,8 +765,8 @@ Header/Parallax Images:
 * About Us - from [Unsplash](https://unsplash.com/photos/6k1PJQpzFQo)
 * Sing Up - from [Unsplash](https://unsplash.com/photos/yCKZFRcX5W4)
 * Login - from [Unsplash](https://unsplash.com/photos/yCKZFRcX5W4)
-* Logout - from [Unsplash](https://unsplash.com/photos/6k1PJQpzFQo)
-* Search Results - from [Unsplash](https://unsplash.com/photos/HG1pJiQHXzs)
+* Logout/Contact Us - from [Unsplash](https://unsplash.com/photos/6k1PJQpzFQo)
+* Search Results/404 Error Page - from [Unsplash](https://unsplash.com/photos/HG1pJiQHXzs)
 
 Recipe Images:
 
@@ -726,7 +789,12 @@ Recipe Images:
 
 * A large part of this project code was used and inspired from the Code Institute's I Think Therefore I Blog walkthrough to be able to build a base skeleton project. Please note some of the borrowed code has been customised by me to fit this project. I have also added my own code for additional functions for the project.
 
+* To build the contact functionality for the website, code from [twilio](https://www.twilio.com/blog/build-contact-form-python-django-twilio-sendgrid) tutorial was used to assist with this.
+
+* [Bootstrap](https://getbootstrap.com/) to help with styling and overall responsivness of the website.
+
 * To assist with the unit testing section of the project, Code Institute's Hello Django Testing tutorial section was utilised as well as the following [YouTube](https://www.youtube.com/watch?v=qwypH3YvMKc&list=PLbpAWbHbi5rMF2j5n6imm0enrSD9eQUaM&index=1) resource.
+
 
 ## Acknowledgements <a name="acknowledgements"></a>
 
