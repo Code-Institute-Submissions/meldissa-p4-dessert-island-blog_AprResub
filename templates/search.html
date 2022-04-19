@@ -34,7 +34,7 @@
                                 <div class="image-container">
                                     {% if "placeholder" in post.featured_image.url %}
                                     <img class="card-img-top"
-                                        src="https://res.cloudinary.com/meldissa/image/upload/v1639765835/cooking-kitchen_1112-116_iksu2f.jpg" alt="Image of baking ingredients and equipment">
+                                        src="https://res.cloudinary.com/meldissa/image/upload/v1639765835/cooking-kitchen_1112-116_iksu2f.jpg" alt="{{ post.title }}">
                                     {% else %}
                                     <img class="card-img-top" src=" {{ post.featured_image.url }}" alt="{{ post.title }}">
                                     {% endif %}
@@ -47,8 +47,17 @@
                                     <p class="card-text">{{ post.excerpt }}</p>
                                 </a>
                                 <hr />
-                                <p class="card-text text-muted h6">{{ post.created_on}} <i class="far fa-heart"></i>
-                                    {{ post.number_of_likes }}</p>
+                                <p class="card-text text-muted h6">
+                                    {{ post.created_on}} 
+                                    <i class="far fa-heart"></i>
+                                    {{ post.number_of_likes }}
+                                    {% if request.user.is_superuser %}
+                                        <small class="ml-3">
+                                            <a href="{% url 'edit_post' post.slug %}">Edit</a> | 
+                                            <a class="text-danger" href="{% url 'delete_post' post.slug %}">Delete</a>
+                                        </small>
+                                    {% endif %}
+                                </p> 
                             </div>
                         </div>
                     </div>
