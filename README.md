@@ -63,6 +63,7 @@ The main target audience for this website are cooking/baking and dessert fanatic
   * As a Site User I can navigate easily through the site and find the relevant information with ease
   * As a Site User I can learn more about the site the purpose of the web app
   * As a Site User I can search keywords for specific recipes
+  * As a Site User I can contact the site owner regarding any feedback or queries
 
 
 * __Site Owner Goals:__
@@ -89,6 +90,7 @@ To achieve the strategy goals, I want to implement the following features:
 * A Footer located at the bottom of the website which allows the user to access social media links.
 * A fully responsive design that will work on different devices including desktop, tablets, and mobile devices, allowing users to access the site anytime and anywhere.
 * An Error 404 Page to allow users to redirect back to Home page in case of any errors.
+* A Contact oage to allow users to leave any feedback or queries.
 * Full CRUD functionality for Admin to allow to create, read, update and delete posts.
 
 
@@ -414,7 +416,7 @@ Once the sign up form fields have been successfully filled out and the user clic
 
 Alternatively for any existing users with an account already created, by selecting the Login button from the button, this will take the user to the Login page. The link is also accessed from the sign up page for existing users. The top of the page is displayed with a parallax style banner image and further down is the Login section, any new users are prompted to go to the sign up page provided from the link. Any existing users are prompted to enter the required details to be able to login. The user is required to enter their username and password which they previously used to create the account. The user also has an option to tick the 'Remeber Me' checkbox. 
 
-![](docs/images/usertest-login.png)
+![](docs/images/usertest-login1.png)
 
 ![](docs/images/usertest-login2.png)
 
@@ -490,6 +492,26 @@ The following user stories have been achieved from this section:
 
 * As a Site User I can search keywords for specific recipes
 
+From the navigation, the user is able to select the 'Contact Us' link. Selecting this link will direct the user to the contact page.
+
+![](docs/images/usertest-contact1.png)
+
+![](docs/images/usertest-contact2.png)
+
+From the contact page, the user is presented with a form to fill out to be able to submit the query, this includes the user's email address, subject and main message. These are required fields to enter for the user to be able to submit the form. 
+
+![](docs/images/usertest-contact3.png)
+
+Once the form is submitted via the 'Send' button, the user is directed to the confirmation page to indicate successful submission of the query.
+
+![](docs/images/usertest-contact4.png)
+
+The side admin will then be able to view the contact messages in the admin only section of the website.
+
+The following user stories have been achieved from this section:
+
+* As a Site User I can contact the site owner regarding any feedback or queries
+
 __Admin Only User Story Testing__
 
 This section tests the user stories for the Admin only functions of the website.
@@ -525,6 +547,24 @@ The admin can also click on an existing posts by selecting the post tile to view
 ![](docs/images/usertest-admin5.png)
 
 The admin can also create new posts by selecting the Add Post + button. This will open up the editor page which will allow the fields to be populated. The status of the post can also be toggled between Draft or Published. The Published posts can then be viewed on the website, whereas Draft posts cannot.
+
+The admin also has the capability to create, edit and delete posts via the front end of the website.
+
+When logged in as admin, from the navigation the admin has an additional link available 'Add Recipe Post'.
+
+![](docs/images/usertest-admin6.png)
+
+Selecting the 'Add Recipe Post' link will direct the admin to the add a recipe page. From here the admin can enter the relevant details on the form to submit the form to add a new recipe to the website. The admin can select whether to create this post as a draft or publish this straight away. Any published posts can be viewed on the home page, and any draft posts can be accessed in the admin section and approved later once editing is completed.
+
+![](docs/images/usertest-admin7.png)
+
+Submitting the form will direct the admin to the home page with a success message.
+
+![](docs/images/usertest-admin8.png)
+
+The admin also has the capability to edit or delete posts. These are displayed on each recipe post on the home page. If delete is selected then the post is deleted from the database and this is confirmed via an alert message. By selecting the edit option, the admin is directed to the edit recipe page which allows for any changes to be made and saved.
+
+![](docs/images/usertest-admin9.png)
 
 These particular admin only permissions cannot be accessed by any other users, and users cannot edit or delete comments or posts or access another users account.
 
@@ -703,7 +743,7 @@ In addition to completing automated testing for this project, the Travis CI for 
 
 * During testing it was identified that when a post has been published and then it is edited and changed to 'Draft' and updated, this will result in a page 404 error as the the user is being re-directed back to the post detail page which no longer exists due to the post being changed to a draft. The actual action itself has gone through and the admin can access the draft post from the admin section. The solution was to add the custom 404 error page to allow the user to navigate back to the home page safely without having to exit the website completely.
 
-* During testing when implementing the full CRUD functionality for admin to add posts via front end a major issue was encountered when the new post was submitted. A Django error page was displayed to indicate that the category column in the model could not be null. However, during the development process the category column which was previously migrated from the model was no longer included in the final project. Due to development error during this project as it was too difficult to unravel the migrations and remove the category column, this was left within the Post model. As this column was not used, a default placeholder was added and the TextField had blank=True and null=True as this was not required. This addition had resolved the issue and the admin can now create new posts without issue.
+* During testing when implementing the full CRUD functionality for admin to add posts via front end a major issue was encountered when the new post was submitted. A Django error page was displayed to indicate that the category column in the model could not be null. However, during the development process the category column which was previously migrated from the model was no longer included in the final project. Due to development error during this project as it was too difficult to unravel the migrations and remove the category column, therefore this was added back to the Post model, please note the project will show an unapplied migration however when trying to migrate an error message occurs as this column already exists in the database. As this column was not used, a default placeholder was added and the TextField had blank=True and null=True as this was not required. This addition had resolved the issue and the admin can now create new posts without issue.
 
 
 ## Deployment <a name="deployment"></a>
